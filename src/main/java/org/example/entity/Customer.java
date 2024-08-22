@@ -1,25 +1,18 @@
 package org.example.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import org.example.embed.FullName;
-
-@Entity
-@Table(name = "customer")
-public class Student {
-    @Id
+public class Customer {
     private int id;
-    private FullName name;
+    private String name;
     private String address;
 
-    public Student(int id, FullName name, String address) {
+    public Customer(int id, String name, String address) {
         this.id = id;
         this.name = name;
         this.address = address;
     }
 
-    public Student() {
+    public Customer() {
+
     }
 
     public int getId() {
@@ -30,11 +23,11 @@ public class Student {
         this.id = id;
     }
 
-    public FullName getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(FullName name) {
+    public void setName(String name) {
         this.name = name;
     }
 
